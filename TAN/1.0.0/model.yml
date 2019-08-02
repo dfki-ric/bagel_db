@@ -1,0 +1,11 @@
+domain: SOFTWARE
+maturity: INPROGRESS
+name: TAN
+type: bagel::atomic
+versions:
+- defaultConfiguration: {data: "interfaces:\n  in1: {bias: 0.0, default: 0.0, merge:\
+      \ SUM}"}
+  interfaces:
+  - {direction: INCOMING, name: in1, type: double}
+  - {direction: OUTGOING, name: out1, type: double}
+  name: 1.0.0

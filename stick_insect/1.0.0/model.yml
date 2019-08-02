@@ -1,0 +1,835 @@
+domain: SOFTWARE
+name: stick_insect
+type: bagel::subgraph
+versions:
+  - name: 1.0.0
+    softwareData:
+      data: "gui:\n  layouts:\n    software:\n      leg11:\n        x: 1090\n        y: 742\n      leg12:\n        x: 1093\n        y: 643\n      leg13:\n        x: 1095\n        y: 546\n      leg23:\n        x: 1105\n        y: 233\n      leg22:\n        x: 1102\n        y: 331\n      leg21:\n        x: 1099\n        y: 430\n      MOD1:\n        x: 470\n        y: 87\n      SIN1:\n        x: 951\n        y: 545\n      SIN2:\n        x: 943\n        y: 273\n      SIN3:\n        x: 957\n        y: 13\n      leg33:\n        x: 1122\n        y: -70\n      leg31:\n        x: 1116\n        y: 126\n      leg32:\n        x: 1119\n        y: 27\n      SIN4:\n        x: 996\n        y: -367\n      leg41:\n        x: 1127\n        y: -182\n      leg43:\n        x: 1132\n        y: -378\n      leg42:\n        x: 1130\n        y: -281\n      SIN5:\n        x: 1006\n        y: -667\n      leg51:\n        x: 1137\n        y: -482\n      leg53:\n        x: 1142\n        y: -677\n      leg52:\n        x: 1141\n        y: -582\n      SIN6:\n        x: 983\n        y: -931\n      leg63:\n        x: 1154\n        y: -985\n      leg61:\n        x: 1148\n        y: -789\n      leg62:\n        x: 1151\n        y: -888\n      SIN7:\n        x: 835\n        y: 639\n      SIN8:\n        x: 836\n        y: 370\n      SIN9:\n        x: 851\n        y: 130\n      SIN10:\n        x: 887\n        y: -227\n      SIN11:\n        x: 898\n        y: -527\n      SIN12:\n        x: 914\n        y: -820\n      PIPE1:\n        x: 965\n        y: 712\n      PIPE2:\n        x: 964\n        y: 398\n      PIPE3:\n        x: 991\n        y: 134\n      PIPE4:\n        x: 1000\n        y: -191\n      PIPE5:\n        x: 1014\n        y: -503\n      PIPE6:\n        x: 1025\n        y: -789\n      PIPE7:\n        x: 480\n        y: -59\n      view:\n        scale: 2.45059\n        x: -2012.88\n        y: 346.338\n  defaultLayout: software\n"
+    maturity: INPROGRESS
+    defaultConfiguration:
+      data: "interfaces:\n  activity:\n    merge: SUM\n    bias: 0\n    default: 0\n  amplitude:\n    merge: SUM\n    bias: 0\n    default: 0\n"
+    date: 2018-10-09T10:17:20
+    interfaces:
+      - name: leg11/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg11
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg12/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg12
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg13/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg13
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg23/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg23
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg22/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg22
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg21/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg21
+        linkToInterface: out1
+        domain: SOFTWARE
+      - data: "initValue: 0\n"
+        name: activity
+        type: double
+        direction: INCOMING
+        linkToNode: MOD1
+        linkToInterface: in1
+        domain: SOFTWARE
+      - name: leg33/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg33
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg31/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg31
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg32/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg32
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg41/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg41
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg43/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg43
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg42/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg42
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg51/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg51
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg53/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg53
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg52/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg52
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg63/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg63
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg61/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg61
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: leg62/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: leg62
+        linkToInterface: out1
+        domain: SOFTWARE
+      - data: "initValue: 0\n"
+        name: amplitude
+        type: double
+        direction: INCOMING
+        linkToNode: PIPE7
+        linkToInterface: in1
+        domain: SOFTWARE
+    components:
+      nodes:
+        - name: leg11
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg12
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg13
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg23
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg22
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg21
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: MOD1
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: MOD
+        - name: SIN1
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN2
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN3
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: leg33
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg31
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg32
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: SIN4
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: leg41
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg43
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg42
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: SIN5
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: leg51
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg53
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg52
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: SIN6
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: leg63
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg61
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: leg62
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: SIN7
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN8
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN9
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN10
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN11
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: SIN12
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: SIN
+        - name: PIPE1
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: PIPE2
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: PIPE3
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: PIPE4
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: PIPE5
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: PIPE6
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: PIPE7
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+      configuration:
+        nodes:
+          - name: leg11
+            data: "interfaces:\n  in1:\n    merge: SUM\n    default: 0\n    bias: 1.57\n"
+          - name: leg12
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: SUM\n    bias: -1.57\n"
+          - name: leg13
+            data: "interfaces:\n  in1:\n    merge: SUM\n    default: 0\n    bias: 1.57\n"
+          - name: leg23
+            data: "interfaces:\n  in1:\n    bias: -1.57\n    merge: SUM\n    default: 0\n"
+          - name: leg22
+            data: "interfaces:\n  in1:\n    merge: SUM\n    bias: 1.57\n    default: 0\n"
+          - name: leg21
+            data: "interfaces:\n  in1:\n    bias: -1.57\n    default: 0\n    merge: SUM\n"
+          - name: MOD1
+            data: "interfaces:\n  in2:\n    default: 6.28\n    bias: 0\n    merge: SUM\n  in1:\n    bias: 0\n    merge: SUM\n    default: 0\n"
+          - name: SIN1
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: SUM\n    bias: 0\n"
+          - name: SIN2
+            data: "interfaces:\n  in1:\n    merge: SUM\n    default: 0\n    bias: 0\n"
+          - name: SIN3
+            data: "interfaces:\n  in1:\n    bias: 3.14\n    default: 0\n    merge: SUM\n"
+          - name: leg33
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: SUM\n    bias: 1.57\n"
+          - name: leg31
+            data: "interfaces:\n  in1:\n    bias: 1.57\n    merge: SUM\n    default: 0\n"
+          - name: leg32
+            data: "interfaces:\n  in1:\n    merge: SUM\n    bias: -1.57\n    default: 0\n"
+          - name: SIN4
+            data: "interfaces:\n  in1:\n    bias: 3.14\n    merge: SUM\n    default: 0\n"
+          - name: leg41
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: -1.57\n    merge: SUM\n"
+          - name: leg43
+            data: "interfaces:\n  in1:\n    bias: -1.57\n    default: 0\n    merge: SUM\n"
+          - name: leg42
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: SUM\n    bias: 1.57\n"
+          - name: SIN5
+            data: "interfaces:\n  in1:\n    bias: 0\n    merge: SUM\n    default: 0\n"
+          - name: leg51
+            data: "interfaces:\n  in1:\n    bias: 1.57\n    default: 0\n    merge: SUM\n"
+          - name: leg53
+            data: "interfaces:\n  in1:\n    merge: SUM\n    bias: 1.57\n    default: 0\n"
+          - name: leg52
+            data: "interfaces:\n  in1:\n    merge: SUM\n    default: 0\n    bias: -1.57\n"
+          - name: SIN6
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: SUM\n    bias: 0\n"
+          - name: leg63
+            data: "interfaces:\n  in1:\n    bias: -1.57\n    merge: SUM\n    default: 0\n"
+          - name: leg61
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: -1.57\n    merge: SUM\n"
+          - name: leg62
+            data: "interfaces:\n  in1:\n    bias: 1.57\n    default: 0\n    merge: SUM\n"
+          - name: SIN7
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: 1.57\n    merge: SUM\n"
+          - name: SIN8
+            data: "interfaces:\n  in1:\n    bias: 1.57\n    default: 0\n    merge: SUM\n"
+          - name: SIN9
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: 4.71\n    merge: SUM\n"
+          - name: SIN10
+            data: "interfaces:\n  in1:\n    merge: SUM\n    default: 0\n    bias: 4.71\n"
+          - name: SIN11
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: 1.57\n    merge: SUM\n"
+          - name: SIN12
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: 1.57\n    merge: SUM\n"
+          - name: PIPE1
+            data: "interfaces:\n  in1:\n    bias: 1\n    merge: PRODUCT\n    default: 0\n"
+          - name: PIPE2
+            data: "interfaces:\n  in1:\n    bias: 1\n    merge: PRODUCT\n    default: 0\n"
+          - name: PIPE3
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: PRODUCT\n    bias: 1\n"
+          - name: PIPE4
+            data: "interfaces:\n  in1:\n    default: 0\n    bias: 1\n    merge: PRODUCT\n"
+          - name: PIPE5
+            data: "interfaces:\n  in1:\n    merge: PRODUCT\n    bias: 1\n    default: 0\n"
+          - name: PIPE6
+            data: "interfaces:\n  in1:\n    merge: PRODUCT\n    default: 0\n    bias: 1\n"
+          - name: PIPE7
+            data: "interfaces:\n  in1:\n    default: 0\n    merge: PRODUCT\n    bias: -1\n"
+      edges:
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: MOD1
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 1\nignore_for_sort: 0\ndomain: software\ndataType: double\nsmooth: true\nweight: 1\ndecouple: false\n"
+          name: 1
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN1
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 2\nignore_for_sort: 0\ndataType: double\nweight: 1\ndomain: software\nsmooth: true\ndecouple: false\n"
+          name: 2
+        - from:
+            name: SIN1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg12
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 3\nignore_for_sort: 0\nsmooth: true\ndecouple: false\ndomain: software\nweight: 0.2\ndataType: double\n"
+          name: 3
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN2
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 5\ndomain: software\nsmooth: true\nweight: 1\ndecouple: false\nignore_for_sort: 0\ndataType: double\n"
+          name: 5
+        - from:
+            name: SIN2
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg22
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 6\ndecouple: false\ndomain: software\nignore_for_sort: 0\ndataType: double\nsmooth: true\nweight: 0.2\n"
+          name: 6
+        - from:
+            name: SIN2
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg23
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 6\ndomain: software\nignore_for_sort: 0\nweight: -0.2\ndecouple: false\ndataType: double\nsmooth: true\n"
+          name: 6
+        - from:
+            name: SIN1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg13
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 7\ndomain: software\nsmooth: true\nweight: -0.2\ndataType: double\nignore_for_sort: 0\ndecouple: false\n"
+          name: 7
+        - from:
+            name: SIN3
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg32
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 6\ndataType: double\nweight: 0.2\ndomain: software\ndecouple: false\nsmooth: true\nignore_for_sort: 0\n"
+          name: 6
+        - from:
+            name: SIN3
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg33
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 9\nignore_for_sort: 0\nsmooth: true\ndomain: software\ndataType: double\nweight: -0.2\ndecouple: false\n"
+          name: 9
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN3
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 10\nweight: 1\ndecouple: false\ndataType: double\nignore_for_sort: 0\ndomain: software\nsmooth: true\n"
+          name: 10
+        - from:
+            name: SIN4
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg42
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 3\ndecouple: false\ndataType: double\ndomain: software\nignore_for_sort: 0\nsmooth: true\nweight: 0.2\n"
+          name: 3
+        - from:
+            name: SIN4
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg43
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 12\nignore_for_sort: 0\ndecouple: false\ndataType: double\ndomain: software\nweight: -0.2\nsmooth: true\n"
+          name: 12
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN4
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 13\nignore_for_sort: 0\ndataType: double\ndecouple: false\ndomain: software\nsmooth: true\nweight: 1\n"
+          name: 13
+        - from:
+            name: SIN5
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg52
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 3\ndecouple: false\nsmooth: true\ndomain: software\nweight: 0.2\nignore_for_sort: 0\ndataType: double\n"
+          name: 3
+        - from:
+            name: SIN5
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg53
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 15\ndomain: software\nsmooth: true\nignore_for_sort: 0\nweight: -0.2\ndecouple: false\ndataType: double\n"
+          name: 15
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN5
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 16\nsmooth: true\ndomain: software\nweight: 1\nignore_for_sort: 0\ndataType: double\ndecouple: false\n"
+          name: 16
+        - from:
+            name: SIN6
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg62
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 6\nweight: 0.2\ndataType: double\ndecouple: false\nsmooth: true\nignore_for_sort: 0\ndomain: software\n"
+          name: 6
+        - from:
+            name: SIN6
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg63
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 18\ndecouple: false\nignore_for_sort: 0\ndataType: double\nweight: -0.2\ndomain: software\nsmooth: true\n"
+          name: 18
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN6
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 19\ndomain: software\nweight: 1\nignore_for_sort: 0\ndataType: double\ndecouple: false\nsmooth: true\n"
+          name: 19
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN7
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 26\ndecouple: false\nweight: 1\nignore_for_sort: 0\ndataType: double\ndomain: software\nsmooth: true\n"
+          name: 26
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN8
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 29\ndataType: double\ndecouple: false\ndomain: software\nsmooth: true\nignore_for_sort: 0\nweight: 1\n"
+          name: 29
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN9
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 30\ndataType: double\nweight: 1\ndomain: software\nignore_for_sort: 0\nsmooth: true\ndecouple: false\n"
+          name: 30
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN10
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 33\ndataType: double\nignore_for_sort: 0\ndomain: software\ndecouple: false\nsmooth: true\nweight: 1\n"
+          name: 33
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN11
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 34\ndomain: software\ndataType: double\nweight: 1\nsmooth: true\nignore_for_sort: 0\ndecouple: false\n"
+          name: 34
+        - from:
+            name: MOD1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: SIN12
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 35\nweight: 1\ndomain: software\ndecouple: false\ndataType: double\nsmooth: true\nignore_for_sort: 0\n"
+          name: 35
+        - from:
+            name: SIN7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE1
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 38\ndomain: software\ndataType: double\nsmooth: true\nignore_for_sort: 0\nweight: 1\ndecouple: false\n"
+          name: 38
+        - from:
+            name: PIPE1
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg11
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 39\ndomain: software\nsmooth: true\ndecouple: false\nweight: 1\nignore_for_sort: 0\ndataType: double\n"
+          name: 39
+        - from:
+            name: SIN8
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE2
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 40\nsmooth: true\ndomain: software\ndecouple: false\nweight: 1\ndataType: double\nignore_for_sort: 0\n"
+          name: 40
+        - from:
+            name: PIPE2
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg21
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 41\nsmooth: true\nweight: 1\ndataType: double\ndomain: software\ndecouple: false\nignore_for_sort: 0\n"
+          name: 41
+        - from:
+            name: SIN9
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE3
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 42\nweight: 1\nignore_for_sort: 0\ndecouple: false\ndataType: double\ndomain: software\nsmooth: true\n"
+          name: 42
+        - from:
+            name: PIPE3
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg31
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 43\ndecouple: false\ndomain: software\nignore_for_sort: 0\ndataType: double\nsmooth: true\nweight: 1\n"
+          name: 43
+        - from:
+            name: SIN10
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE4
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 44\nsmooth: true\ndomain: software\ndataType: double\nignore_for_sort: 0\nweight: 1\ndecouple: false\n"
+          name: 44
+        - from:
+            name: PIPE4
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg41
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 45\ndataType: double\nweight: 1\ndomain: software\nignore_for_sort: 0\nsmooth: true\ndecouple: false\n"
+          name: 45
+        - from:
+            name: SIN11
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE5
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 46\nweight: 1\ndataType: double\nignore_for_sort: 0\nsmooth: true\ndecouple: false\ndomain: software\n"
+          name: 46
+        - from:
+            name: PIPE5
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg51
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 47\ndataType: double\ndomain: software\nignore_for_sort: 0\nsmooth: true\nweight: 1\ndecouple: false\n"
+          name: 47
+        - from:
+            name: SIN12
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE6
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 48\ndataType: double\ndecouple: false\nsmooth: true\ndomain: software\nignore_for_sort: 0\nweight: 1\n"
+          name: 48
+        - from:
+            name: PIPE6
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: leg61
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 49\nsmooth: true\ndataType: double\nweight: 1\ndomain: software\nignore_for_sort: 0\ndecouple: false\n"
+          name: 49
+        - from:
+            name: PIPE7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE6
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 50\ndomain: software\nsmooth: true\ndecouple: false\nweight: 1\ndataType: double\nignore_for_sort: 0\n"
+          name: 50
+        - from:
+            name: PIPE7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE5
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 51\nweight: 1\nignore_for_sort: 0\ndataType: double\ndecouple: false\ndomain: software\nsmooth: true\n"
+          name: 51
+        - from:
+            name: PIPE7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE4
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 52\ndataType: double\nsmooth: true\nignore_for_sort: 0\nweight: 1\ndecouple: false\ndomain: software\n"
+          name: 52
+        - from:
+            name: PIPE7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE3
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 53\ndomain: software\nweight: 1\ndataType: double\ndecouple: false\nsmooth: true\nignore_for_sort: 0\n"
+          name: 53
+        - from:
+            name: PIPE7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE2
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 54\nweight: 1\ndomain: software\nsmooth: true\ndataType: double\ndecouple: false\nignore_for_sort: 0\n"
+          name: 54
+        - from:
+            name: PIPE7
+            interface: out1
+            domain: SOFTWARE
+          to:
+            name: PIPE1
+            interface: in1
+            domain: SOFTWARE
+          data: "name: 55\nignore_for_sort: 0\nsmooth: true\nweight: 1\ndomain: software\ndataType: double\ndecouple: false\n"
+          name: 55

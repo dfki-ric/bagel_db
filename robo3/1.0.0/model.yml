@@ -1,0 +1,42 @@
+domain: SOFTWARE
+name: robo3
+type: bagel::subgraph
+versions:
+  - name: 1.0.0
+    softwareData:
+      data: "gui:\n  layouts:\n    software:\n      left_wheel:\n        x: 1095\n        y: 749\n      right_wheel:\n        x: 1093\n        y: 643\n      view:\n        scale: 2.125\n        x: -2231.92\n        y: -1095.84\n  defaultLayout: software\n"
+    maturity: INPROGRESS
+    defaultConfiguration:
+      data: "interfaces:\n  {}\n"
+    date: 2018-10-26T13:46:17
+    interfaces:
+      - name: left_wheel/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: left_wheel
+        linkToInterface: out1
+        domain: SOFTWARE
+      - name: right_wheel/des_angle
+        type: double
+        direction: OUTGOING
+        linkToNode: right_wheel
+        linkToInterface: out1
+        domain: SOFTWARE
+    components:
+      nodes:
+        - name: left_wheel
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+        - name: right_wheel
+          model:
+            domain: SOFTWARE
+            version: 1.0.0
+            name: PIPE
+      configuration:
+        nodes:
+          - name: left_wheel
+            data: "interfaces:\n  in1:\n    bias: 0\n    default: 0\n    merge: SUM\n"
+          - name: right_wheel
+            data: "interfaces:\n  in1:\n    bias: 0\n    default: 0\n    merge: SUM\n"

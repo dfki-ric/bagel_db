@@ -1,0 +1,69 @@
+models:
+- name: ==0
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: ABS
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: ASIN
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: COS
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: DIVIDE
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: MOD
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: PIPE
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: POW
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: SIN
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: SQRT
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: TAN
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: g0
+  type: bagel::atomic
+  versions:
+  - {name: 1.0.0}
+- name: robo2
+  type: bagel::subgraph
+  versions:
+  - {name: 1.0.0}
+- name: robo3
+  type: bagel::subgraph
+  versions:
+  - {name: 1.0.0}
+- name: stick_insect
+  type: bagel::subgraph
+  versions:
+  - {name: 1.0.0}
+- name: wheelchair
+  type: bagel::subgraph
+  versions:
+  - {name: 1.0.0}
+- name: turtlebot
+  type: bagel::subgraph
+  versions:
+  - {name: 1.0.0}
